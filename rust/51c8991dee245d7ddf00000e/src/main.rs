@@ -5,8 +5,13 @@ fn main() {
 fn reverse_words(str: &str) -> String {
     let mut text = str.split(" ").collect::<Vec<&str>>();
     text.reverse();
-    return text.join(" ");
+    text.join(" ")
 }
+
+// Best solution
+// fn reverse_words(str: &str) -> String {
+//     str.split_whitespace().rev().collect::<Vec<_>>().join(" ")
+// }
 
 #[test]
 fn returns_expected() {
